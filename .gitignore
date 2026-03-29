@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+
+# uv
+.python-version
+
+# MkDocs
+site/
+
+# Runtime data
+*.db
+*.duckdb
+
+# IDE
+.vscode/
+.idea/

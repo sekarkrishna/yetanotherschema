@@ -1,0 +1,34 @@
+site_name: YetAnotherSchema
+site_description: A semantic database for auditable data with append-only corrections and full traceability
+site_url: https://sekarkrishna.github.io/yetanotherschema
+repo_url: https://github.com/sekarkrishna/yetanotherschema
+repo_name: sekarkrishna/yetanotherschema
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.top
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - API Reference: api.md
+  - Examples: examples.md
+  - Roadmap: roadmap.md
+
+plugins:
+  - search
