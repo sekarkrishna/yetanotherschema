@@ -1,0 +1,1773 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A semantic database for auditable data with append-only corrections and full traceability">
+      
+      
+      
+        <link rel="canonical" href="https://sekarkrishna.github.io/yetanotherschema/api/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../examples/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>API Reference - YetAnotherSchema</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#yetanotherschema-api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="YetAnotherSchema" class="md-header__button md-logo" aria-label="YetAnotherSchema" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            YetAnotherSchema
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sekarkrishna/yetanotherschema" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sekarkrishna/yetanotherschema
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="YetAnotherSchema" class="md-nav__button md-logo" aria-label="YetAnotherSchema" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    YetAnotherSchema
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sekarkrishna/yetanotherschema" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sekarkrishna/yetanotherschema
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#main-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Main API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Main API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yetanotherschema-primary-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        YetAnotherSchema (Primary Interface)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗄️ Core Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🗄️ Core Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#databasemanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DatabaseManager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valuestore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ValueStore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationshipstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RelationshipStore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queryengine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QueryEngine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressionengine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExpressionEngine
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utility-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Utility Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Utility Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema_validatorpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        schema_validator.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context_parserpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        context_parser.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type_converterpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        type_converter.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Usage Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Usage Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-basic-write-and-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Basic Write and Query
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-batch-write" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Batch Write
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-materialize-view-with-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3: Materialize View with Expressions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4-time-travel-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 4: Time-Travel Query
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5-context-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 5: Context Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-types-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Return Types Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#main-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Main API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Main API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yetanotherschema-primary-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        YetAnotherSchema (Primary Interface)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗄️ Core Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🗄️ Core Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#databasemanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DatabaseManager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valuestore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ValueStore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationshipstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RelationshipStore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queryengine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QueryEngine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressionengine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExpressionEngine
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utility-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Utility Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Utility Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema_validatorpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        schema_validator.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context_parserpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        context_parser.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type_converterpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        type_converter.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Usage Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Usage Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-basic-write-and-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Basic Write and Query
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-batch-write" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Batch Write
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-materialize-view-with-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3: Materialize View with Expressions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4-time-travel-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 4: Time-Travel Query
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5-context-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 5: Context Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#return-types-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Return Types Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="yetanotherschema-api-reference">YetAnotherSchema - API Reference</h1>
+<p><strong>Version:</strong> 0.1.0 MVP<br />
+<strong>Complete Function Signatures</strong></p>
+<hr />
+<h2 id="main-api">📦 Main API</h2>
+<h3 id="yetanotherschema-primary-interface"><code>YetAnotherSchema</code> (Primary Interface)</h3>
+<pre><code class="language-python">class YetAnotherSchema:
+    &quot;&quot;&quot;
+    Main database interface for YetAnotherSchema.
+
+    Example:
+        db = YetAnotherSchema(
+            db_path='clinical_study.db',
+            schema_path='schema.toml'
+        )
+    &quot;&quot;&quot;
+
+    def __init__(
+        self,
+        db_path: str,
+        schema_path: str,
+        read_only: bool = False
+    ) -&gt; None:
+        &quot;&quot;&quot;
+        Initialize database.
+
+        Args:
+            db_path: Path to DuckDB file (created if doesn't exist)
+            schema_path: Path to TOML schema definition
+            read_only: If True, open in read-only mode
+
+        Raises:
+            SchemaValidationError: If schema is invalid
+            DatabaseError: If database cannot be opened
+        &quot;&quot;&quot;
+        pass
+
+    def write(
+        self,
+        field: str,
+        raw_value: Any,
+        contexts: Dict[str, str],
+        user_id: str,
+        metadata: Optional[Dict[str, Any]] = None,
+        reported_timestamp: Optional[str] = None
+    ) -&gt; int:
+        &quot;&quot;&quot;
+        Write a single value to the database.
+
+        Args:
+            field: Field name (e.g., 'height', 'weight')
+            raw_value: The actual value (will be converted to string)
+            contexts: Context mappings (e.g., {'subject_id': 'S001', 'visit': 'V1'})
+            user_id: User who created this value
+            metadata: Optional metadata dict (merged with schema metadata)
+            reported_timestamp: Optional user-reported timestamp (ISO format)
+
+        Returns:
+            value_id: Unique ID of the created value
+
+        Raises:
+            ValidationError: If required contexts are missing
+            DatabaseError: If write fails
+
+        Example:
+            value_id = db.write(
+                field='height',
+                raw_value=170,
+                contexts={'subject_id': 'S001', 'visit': 'V1'},
+                user_id='nurse_001',
+                reported_timestamp='2026-01-30T09:00:00'
+            )
+        &quot;&quot;&quot;
+        pass
+
+    def write_batch(
+        self,
+        records: List[Dict[str, Any]]
+    ) -&gt; List[int]:
+        &quot;&quot;&quot;
+        Write multiple values in a single transaction (faster).
+
+        Args:
+            records: List of dicts, each with keys:
+                - field: str
+                - raw_value: Any
+                - contexts: Dict[str, str]
+                - user_id: str
+                - metadata: Optional[Dict]
+                - reported_timestamp: Optional[str]
+
+        Returns:
+            List of value_ids
+
+        Example:
+            value_ids = db.write_batch([
+                {
+                    'field': 'height',
+                    'raw_value': 170,
+                    'contexts': {'subject_id': 'S001', 'visit': 'V1'},
+                    'user_id': 'nurse_001'
+                },
+                {
+                    'field': 'weight',
+                    'raw_value': 70,
+                    'contexts': {'subject_id': 'S001', 'visit': 'V1'},
+                    'user_id': 'nurse_001'
+                }
+            ])
+        &quot;&quot;&quot;
+        pass
+
+    def query(
+        self,
+        contexts: Dict[str, str],
+        fields: Optional[List[str]] = None,
+        as_of: Optional[str] = None,
+        latest_only: bool = True,
+        include_metadata: bool = True
+    ) -&gt; pl.DataFrame:
+        &quot;&quot;&quot;
+        Query values matching context filter.
+
+        Args:
+            contexts: Context filter (e.g., {'subject_id': 'S001'})
+            fields: Specific fields to retrieve (None = all)
+            as_of: Timestamp for time-travel query (ISO format)
+            latest_only: If True, return only latest value per field+context
+            include_metadata: If True, include metadata column
+
+        Returns:
+            Polars DataFrame with columns:
+                - field: str
+                - raw_value: str
+                - metadata: dict (if include_metadata=True)
+                - reported_timestamp: datetime
+                - created_timestamp: datetime
+                - user_id: str
+                - [context columns]: str
+
+        Example:
+            # Get all data for subject S001
+            data = db.query(contexts={'subject_id': 'S001'})
+
+            # Get specific fields for subject S001, visit V1
+            data = db.query(
+                contexts={'subject_id': 'S001', 'visit': 'V1'},
+                fields=['height', 'weight']
+            )
+
+            # Time-travel query
+            data = db.query(
+                contexts={'subject_id': 'S001'},
+                as_of='2026-01-15T00:00:00'
+            )
+        &quot;&quot;&quot;
+        pass
+
+    def materialize_view(
+        self,
+        contexts: Dict[str, str],
+        fields: List[str],
+        expressions: Optional[Dict[str, pl.Expr]] = None,
+        pivot: bool = True
+    ) -&gt; pl.DataFrame:
+        &quot;&quot;&quot;
+        Materialize a traditional table view with optional expressions.
+
+        Args:
+            contexts: Context filter
+            fields: Fields to include in view
+            expressions: Dict of {name: polars_expression} for derived columns
+            pivot: If True, pivot to wide format (one row per context)
+
+        Returns:
+            Polars DataFrame in traditional table format
+
+        Example:
+            # Simple view
+            view = db.materialize_view(
+                contexts={'subject_id': 'S001', 'visit': 'V1'},
+                fields=['height', 'weight']
+            )
+            # Result: subject_id | visit | height | weight
+
+            # View with BMI calculation
+            view = db.materialize_view(
+                contexts={'subject_id': 'S001', 'visit': 'V1'},
+                fields=['height', 'weight'],
+                expressions={
+                    'bmi': pl.col('weight') / (pl.col('height')/100)**2
+                }
+            )
+            # Result: subject_id | visit | height | weight | bmi
+        &quot;&quot;&quot;
+        pass
+
+    def get_history(
+        self,
+        field: str,
+        contexts: Dict[str, str]
+    ) -&gt; pl.DataFrame:
+        &quot;&quot;&quot;
+        Get full history of a value (all versions).
+
+        Args:
+            field: Field name
+            contexts: Context filter
+
+        Returns:
+            Polars DataFrame with all versions, sorted by created_timestamp
+
+        Example:
+            # See all corrections for weight
+            history = db.get_history(
+                field='weight',
+                contexts={'subject_id': 'S001', 'visit': 'V1'}
+            )
+        &quot;&quot;&quot;
+        pass
+
+    def stats(self) -&gt; Dict[str, Any]:
+        &quot;&quot;&quot;
+        Get database statistics.
+
+        Returns:
+            Dict with:
+                - total_values: int
+                - unique_contexts: int
+                - fields: List[str]
+                - storage_size_mb: float
+                - oldest_timestamp: str
+                - newest_timestamp: str
+
+        Example:
+            stats = db.stats()
+            print(f&quot;Total values: {stats['total_values']}&quot;)
+        &quot;&quot;&quot;
+        pass
+
+    def validate_schema(self) -&gt; Dict[str, Any]:
+        &quot;&quot;&quot;
+        Validate current schema against database.
+
+        Returns:
+            Dict with validation results:
+                - valid: bool
+                - errors: List[str]
+                - warnings: List[str]
+        &quot;&quot;&quot;
+        pass
+
+    def close(self) -&gt; None:
+        &quot;&quot;&quot;
+        Close database connection.
+
+        Example:
+            db.close()
+            # Or use context manager:
+            with YetAnotherSchema('data.db', 'schema.toml') as db:
+                db.write(...)
+        &quot;&quot;&quot;
+        pass
+
+    def __enter__(self):
+        &quot;&quot;&quot;Context manager entry&quot;&quot;&quot;
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        &quot;&quot;&quot;Context manager exit&quot;&quot;&quot;
+        self.close()
+</code></pre>
+<hr />
+<h2 id="core-components">🗄️ Core Components</h2>
+<h3 id="databasemanager"><code>DatabaseManager</code></h3>
+<pre><code class="language-python">class DatabaseManager:
+    &quot;&quot;&quot;Manages DuckDB connection and schema.&quot;&quot;&quot;
+
+    def __init__(
+        self,
+        db_path: str,
+        schema: Dict[str, Any],
+        read_only: bool = False
+    ) -&gt; None:
+        &quot;&quot;&quot;Initialize database connection.&quot;&quot;&quot;
+        pass
+
+    def execute(
+        self,
+        query: str,
+        params: Optional[Dict] = None
+    ) -&gt; Any:
+        &quot;&quot;&quot;Execute SQL query.&quot;&quot;&quot;
+        pass
+
+    def execute_many(
+        self,
+        query: str,
+        params_list: List[Dict]
+    ) -&gt; None:
+        &quot;&quot;&quot;Execute query with multiple parameter sets.&quot;&quot;&quot;
+        pass
+
+    def fetch_df(
+        self,
+        query: str,
+        params: Optional[Dict] = None
+    ) -&gt; pl.DataFrame:
+        &quot;&quot;&quot;Execute query and return Polars DataFrame.&quot;&quot;&quot;
+        pass
+
+    def begin_transaction(self) -&gt; None:
+        &quot;&quot;&quot;Begin transaction.&quot;&quot;&quot;
+        pass
+
+    def commit(self) -&gt; None:
+        &quot;&quot;&quot;Commit transaction.&quot;&quot;&quot;
+        pass
+
+    def rollback(self) -&gt; None:
+        &quot;&quot;&quot;Rollback transaction.&quot;&quot;&quot;
+        pass
+
+    def close(self) -&gt; None:
+        &quot;&quot;&quot;Close connection.&quot;&quot;&quot;
+        pass
+</code></pre>
+<h3 id="valuestore"><code>ValueStore</code></h3>
+<pre><code class="language-python">class ValueStore:
+    &quot;&quot;&quot;Inner Sphere: Manages atomic values.&quot;&quot;&quot;
+
+    def __init__(self, db_manager: DatabaseManager) -&gt; None:
+        &quot;&quot;&quot;Initialize value store.&quot;&quot;&quot;
+        pass
+
+    def add_value(
+        self,
+        field: str,
+        raw_value: Any,
+        metadata: Dict[str, Any],
+        user_id: str,
+        reported_timestamp: Optional[str] = None
+    ) -&gt; int:
+        &quot;&quot;&quot;
+        Add a value to the database.
+
+        Returns:
+            value_id
+        &quot;&quot;&quot;
+        pass
+
+    def add_values_batch(
+        self,
+        values: List[Dict[str, Any]]
+    ) -&gt; List[int]:
+        &quot;&quot;&quot;
+        Add multiple values in batch.
+
+        Returns:
+            List of value_ids
+        &quot;&quot;&quot;
+        pass
+
+    def get_values(
+        self,
+        value_ids: List[int]
+    ) -&gt; pl.DataFrame:
+        &quot;&quot;&quot;
+        Get values by IDs.
+
+        Returns:
+            Polars DataFrame
+        &quot;&quot;&quot;
+        pass
+
+    def get_values_by_field(
+        self,
+        field: str,
+        as_of: Optional[str] = None
+    ) -&gt; pl.DataFrame:
+        &quot;&quot;&quot;
+        Get all values for a field.
+
+        Returns:
+            Polars DataFrame
+        &quot;&quot;&quot;
+        pass
+</code></pre>
+<h3 id="relationshipstore"><code>RelationshipStore</code></h3>
+<pre><code class="language-python">class RelationshipStore:
+    &quot;&quot;&quot;Middle Sphere: Manages context relationships.&quot;&quot;&quot;
+
+    def __init__(self, db_manager: DatabaseManager) -&gt; None:
+        &quot;&quot;&quot;Initialize relationship store.&quot;&quot;&quot;
+        pass
+
+    def add_relationship(
+        self,
+        context_key: str,
+        field: str,
+        value_id: int
+    ) -&gt; int:
+        &quot;&quot;&quot;
+        Add a context → value relationship.
+
+        Returns:
+            relationship_id
+        &quot;&quot;&quot;
+        pass
+
+    def add_relationships_batch(
+        self,
+        relationships: List[Dict[str, Any]]
+    ) -&gt; List[int]:
+        &quot;&quot;&quot;
+        Add multiple relationships in batch.
+
+        Returns:
+            List of relationship_ids
+        &quot;&quot;&quot;
+        pass
+
+    def get_value_ids(
+        self,
+        context_filter: Dict[str, str],
+        fields: Optional[List[str]] = None
+    ) -&gt; pl.DataFrame:
+        &quot;&quot;&quot;
+        Get value IDs matching context filter.
+
+        Returns:
+            Polars DataFrame with columns:
+                - context_key: str
+                - field: str
+                - value_id: int
+        &quot;&quot;&quot;
+        pass
+
+    def get_contexts(
+        self,
+        value_id: int
+    ) -&gt; List[Dict[str, str]]:
+        &quot;&quot;&quot;
+        Get all contexts for a value.
+
+        Returns:
+            List of context dicts
+        &quot;&quot;&quot;
+        pass
+</code></pre>
+<h3 id="queryengine"><code>QueryEngine</code></h3>
+<pre><code class="language-python">class QueryEngine:
+    &quot;&quot;&quot;High-level query interface.&quot;&quot;&quot;
+
+    def __init__(
+        self,
+        value_store: ValueStore,
+        relationship_store: RelationshipStore,
+        expression_engine: ExpressionEngine
+    ) -&gt; None:
+        &quot;&quot;&quot;Initialize query engine.&quot;&quot;&quot;
+        pass
+
+    def query(
+        self,
+        contexts: Dict[str, str],
+        fields: Optional[List[str]] = None,
+        as_of: Optional[str] = None,
+        latest_only: bool = True,
+        include_metadata: bool = True
+    ) -&gt; pl.DataFrame:
+        &quot;&quot;&quot;
+        Query values with context filter.
+
+        Returns:
+            Polars DataFrame
+        &quot;&quot;&quot;
+        pass
+
+    def materialize_view(
+        self,
+        contexts: Dict[str, str],
+        fields: List[str],
+        expressions: Optional[Dict[str, pl.Expr]] = None,
+        pivot: bool = True
+    ) -&gt; pl.DataFrame:
+        &quot;&quot;&quot;
+        Materialize traditional table view.
+
+        Returns:
+            Polars DataFrame
+        &quot;&quot;&quot;
+        pass
+
+    def get_history(
+        self,
+        field: str,
+        contexts: Dict[str, str]
+    ) -&gt; pl.DataFrame:
+        &quot;&quot;&quot;
+        Get full history of a value.
+
+        Returns:
+            Polars DataFrame sorted by created_timestamp
+        &quot;&quot;&quot;
+        pass
+</code></pre>
+<h3 id="expressionengine"><code>ExpressionEngine</code></h3>
+<pre><code class="language-python">class ExpressionEngine:
+    &quot;&quot;&quot;Outer Sphere: Evaluates expressions using Polars.&quot;&quot;&quot;
+
+    def __init__(self) -&gt; None:
+        &quot;&quot;&quot;Initialize expression engine.&quot;&quot;&quot;
+        pass
+
+    def register_expression(
+        self,
+        name: str,
+        expr: pl.Expr
+    ) -&gt; None:
+        &quot;&quot;&quot;
+        Register a named Polars expression.
+
+        Example:
+            engine.register_expression(
+                'bmi',
+                pl.col('weight') / (pl.col('height')/100)**2
+            )
+        &quot;&quot;&quot;
+        pass
+
+    def evaluate(
+        self,
+        expr_name: str,
+        data: pl.DataFrame
+    ) -&gt; pl.Series:
+        &quot;&quot;&quot;
+        Evaluate registered expression on data.
+
+        Returns:
+            Polars Series with results
+        &quot;&quot;&quot;
+        pass
+
+    def evaluate_multiple(
+        self,
+        expr_names: List[str],
+        data: pl.DataFrame
+    ) -&gt; pl.DataFrame:
+        &quot;&quot;&quot;
+        Evaluate multiple expressions.
+
+        Returns:
+            Polars DataFrame with new columns
+        &quot;&quot;&quot;
+        pass
+</code></pre>
+<hr />
+<h2 id="utility-functions">🛠️ Utility Functions</h2>
+<h3 id="schema_validatorpy"><code>schema_validator.py</code></h3>
+<pre><code class="language-python">def load_schema(schema_path: str) -&gt; Dict[str, Any]:
+    &quot;&quot;&quot;
+    Load and validate TOML schema.
+
+    Args:
+        schema_path: Path to schema.toml
+
+    Returns:
+        Validated schema dict
+
+    Raises:
+        SchemaValidationError: If schema is invalid
+    &quot;&quot;&quot;
+    pass
+
+def validate_schema(schema: Dict[str, Any]) -&gt; Dict[str, Any]:
+    &quot;&quot;&quot;
+    Validate schema structure.
+
+    Returns:
+        Dict with validation results
+    &quot;&quot;&quot;
+    pass
+
+def validate_contexts(
+    contexts: Dict[str, str],
+    schema: Dict[str, Any]
+) -&gt; None:
+    &quot;&quot;&quot;
+    Validate contexts against schema.
+
+    Raises:
+        ValidationError: If required contexts are missing
+    &quot;&quot;&quot;
+    pass
+</code></pre>
+<h3 id="context_parserpy"><code>context_parser.py</code></h3>
+<pre><code class="language-python">def build_context_key(contexts: Dict[str, str]) -&gt; str:
+    &quot;&quot;&quot;
+    Build a unique key from contexts.
+
+    Args:
+        contexts: {'subject_id': 'S001', 'visit': 'V1'}
+
+    Returns:
+        'subject_id=S001,visit=V1' (sorted)
+    &quot;&quot;&quot;
+    pass
+
+def parse_context_key(context_key: str) -&gt; Dict[str, str]:
+    &quot;&quot;&quot;
+    Parse context key back to dict.
+
+    Args:
+        context_key: 'subject_id=S001,visit=V1'
+
+    Returns:
+        {'subject_id': 'S001', 'visit': 'V1'}
+    &quot;&quot;&quot;
+    pass
+
+def match_context_filter(
+    context_key: str,
+    context_filter: Dict[str, str]
+) -&gt; bool:
+    &quot;&quot;&quot;
+    Check if context key matches filter.
+
+    Returns:
+        True if all filter items match
+    &quot;&quot;&quot;
+    pass
+</code></pre>
+<h3 id="type_converterpy"><code>type_converter.py</code></h3>
+<pre><code class="language-python">def value_to_string(value: Any) -&gt; str:
+    &quot;&quot;&quot;
+    Convert value to string for storage.
+
+    Handles: int, float, str, bool, None, datetime
+    &quot;&quot;&quot;
+    pass
+
+def string_to_value(
+    value_str: str,
+    value_type: str
+) -&gt; Any:
+    &quot;&quot;&quot;
+    Convert string back to typed value.
+
+    Args:
+        value_str: Stored string
+        value_type: 'numeric', 'text', 'boolean', 'datetime'
+
+    Returns:
+        Typed value
+    &quot;&quot;&quot;
+    pass
+
+def parse_metadata(metadata_json: str) -&gt; Dict[str, Any]:
+    &quot;&quot;&quot;Parse JSON metadata string.&quot;&quot;&quot;
+    pass
+
+def serialize_metadata(metadata: Dict[str, Any]) -&gt; str:
+    &quot;&quot;&quot;Serialize metadata to JSON string.&quot;&quot;&quot;
+    pass
+</code></pre>
+<hr />
+<h2 id="usage-examples">🎯 Usage Examples</h2>
+<h3 id="example-1-basic-write-and-query">Example 1: Basic Write and Query</h3>
+<pre><code class="language-python">from yetanotherschema import YetAnotherSchema
+
+# Initialize
+db = YetAnotherSchema(
+    db_path='clinical_study.db',
+    schema_path='schema.toml'
+)
+
+# Write data
+db.write(
+    field='height',
+    raw_value=170,
+    contexts={'subject_id': 'S001', 'visit': 'V1'},
+    user_id='nurse_001'
+)
+
+# Query
+data = db.query(contexts={'subject_id': 'S001'})
+print(data)
+
+db.close()
+</code></pre>
+<h3 id="example-2-batch-write">Example 2: Batch Write</h3>
+<pre><code class="language-python"># Batch write for performance
+records = [
+    {
+        'field': 'height',
+        'raw_value': 170,
+        'contexts': {'subject_id': 'S001', 'visit': 'V1'},
+        'user_id': 'nurse_001'
+    },
+    {
+        'field': 'weight',
+        'raw_value': 70,
+        'contexts': {'subject_id': 'S001', 'visit': 'V1'},
+        'user_id': 'nurse_001'
+    }
+]
+
+value_ids = db.write_batch(records)
+</code></pre>
+<h3 id="example-3-materialize-view-with-expressions">Example 3: Materialize View with Expressions</h3>
+<pre><code class="language-python">import polars as pl
+
+# Materialize view with BMI calculation
+view = db.materialize_view(
+    contexts={'subject_id': 'S001', 'visit': 'V1'},
+    fields=['height', 'weight'],
+    expressions={
+        'bmi': pl.col('weight') / (pl.col('height')/100)**2,
+        'bmi_category': pl.when(pl.col('bmi') &lt; 18.5).then('Underweight')
+                         .when(pl.col('bmi') &lt; 25).then('Normal')
+                         .when(pl.col('bmi') &lt; 30).then('Overweight')
+                         .otherwise('Obese')
+    }
+)
+
+print(view)
+</code></pre>
+<h3 id="example-4-time-travel-query">Example 4: Time-Travel Query</h3>
+<pre><code class="language-python"># Query data as it was on a specific date
+historical_data = db.query(
+    contexts={'subject_id': 'S001'},
+    as_of='2026-01-15T00:00:00'
+)
+</code></pre>
+<h3 id="example-5-context-manager">Example 5: Context Manager</h3>
+<pre><code class="language-python"># Use context manager for automatic cleanup
+with YetAnotherSchema('data.db', 'schema.toml') as db:
+    db.write(...)
+    data = db.query(...)
+# Automatically closed
+</code></pre>
+<hr />
+<h2 id="return-types-summary">📊 Return Types Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>write()</code></td>
+<td><code>int</code> (value_id)</td>
+</tr>
+<tr>
+<td><code>write_batch()</code></td>
+<td><code>List[int]</code> (value_ids)</td>
+</tr>
+<tr>
+<td><code>query()</code></td>
+<td><code>pl.DataFrame</code></td>
+</tr>
+<tr>
+<td><code>materialize_view()</code></td>
+<td><code>pl.DataFrame</code></td>
+</tr>
+<tr>
+<td><code>get_history()</code></td>
+<td><code>pl.DataFrame</code></td>
+</tr>
+<tr>
+<td><code>stats()</code></td>
+<td><code>Dict[str, Any]</code></td>
+</tr>
+<tr>
+<td><code>validate_schema()</code></td>
+<td><code>Dict[str, Any]</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Total Functions:</strong> ~30<br />
+<strong>Main API Functions:</strong> 10<br />
+<strong>Core Component Functions:</strong> 15<br />
+<strong>Utility Functions:</strong> 5</p>
+<p>Does this API look good to you? Any changes you'd like before we start implementation?</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

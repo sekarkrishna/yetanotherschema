@@ -1,0 +1,2798 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A semantic database for auditable data with append-only corrections and full traceability">
+      
+      
+      
+        <link rel="canonical" href="https://sekarkrishna.github.io/yetanotherschema/">
+      
+      
+      
+        <link rel="next" href="api/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>YetAnotherSchema</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#yetanotherschema" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="YetAnotherSchema" class="md-header__button md-logo" aria-label="YetAnotherSchema" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            YetAnotherSchema
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sekarkrishna/yetanotherschema" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sekarkrishna/yetanotherschema
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="YetAnotherSchema" class="md-nav__button md-logo" aria-label="YetAnotherSchema" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    YetAnotherSchema
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sekarkrishna/yetanotherschema" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sekarkrishna/yetanotherschema
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-yetanotherschema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 What is YetAnotherSchema?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 What is YetAnotherSchema?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem-with-traditional-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem with Traditional Databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-yetanotherschema-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The YetAnotherSchema Solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧬 Core Philosophy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧬 Core Philosophy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#values-are-free-ions-not-tables-everything-else-is-a-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Values are free ions, not tables. Everything else is a view."
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-sphere-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Three-Sphere Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌟 Real-World Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌟 Real-World Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-employee-database-no-duplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Employee Database - No Duplication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-product-catalog-massive-savings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Product Catalog - Massive Savings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-data-correction-with-audit-trail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3: Data Correction with Audit Trail
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Quick Start
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Quick Start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 API Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 API Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-create-a-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. create() - Create a Space
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-write-write-a-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. write() - Write a Value
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-write_batch-write-multiple-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. write_batch() - Write Multiple Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-read-read-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. read() - Read Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-schema-view-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. schema() - View Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-list_spaces-list-all-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. list_spaces() - List All Spaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Schema Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprehensive-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Comprehensive Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📖 Comprehensive Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-basic-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Basic Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-batch-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Batch Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-context-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3: Context Filtering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4-value-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 4: Value Filtering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5-data-corrections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 5: Data Corrections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-6-time-travel-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 6: Time-Travel Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-7-metadata-inclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 7: Metadata Inclusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-8-schema-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 8: Schema Inspection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-9-multi-site-study" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 9: Multi-Site Study
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-10-unit-harmonization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 10: Unit Harmonization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-corrections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Data Corrections
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clinical-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clinical Research
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#financial-trading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Financial Trading
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iot-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IoT Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manufacturing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manufacturing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Performance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔮 Future Vision
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔮 Future Vision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sub-spaces-for-data-residency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sub-Spaces for Data Residency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Evolution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-based-time-travel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event-Based Time-Travel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-value-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Missing Value Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛣️ Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛣️ Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v011-current-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v0.1.1 (Current - MVP) ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 License
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-yetanotherschema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 What is YetAnotherSchema?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 What is YetAnotherSchema?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem-with-traditional-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem with Traditional Databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-yetanotherschema-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The YetAnotherSchema Solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧬 Core Philosophy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧬 Core Philosophy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#values-are-free-ions-not-tables-everything-else-is-a-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Values are free ions, not tables. Everything else is a view."
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-sphere-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Three-Sphere Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌟 Real-World Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌟 Real-World Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-employee-database-no-duplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Employee Database - No Duplication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-product-catalog-massive-savings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Product Catalog - Massive Savings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-data-correction-with-audit-trail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3: Data Correction with Audit Trail
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Quick Start
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Quick Start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 API Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 API Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-create-a-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. create() - Create a Space
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-write-write-a-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. write() - Write a Value
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-write_batch-write-multiple-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. write_batch() - Write Multiple Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-read-read-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. read() - Read Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-schema-view-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. schema() - View Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-list_spaces-list-all-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. list_spaces() - List All Spaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Schema Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprehensive-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Comprehensive Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📖 Comprehensive Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-basic-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Basic Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-batch-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Batch Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-context-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3: Context Filtering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-4-value-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 4: Value Filtering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-5-data-corrections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 5: Data Corrections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-6-time-travel-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 6: Time-Travel Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-7-metadata-inclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 7: Metadata Inclusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-8-schema-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 8: Schema Inspection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-9-multi-site-study" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 9: Multi-Site Study
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-10-unit-harmonization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 10: Unit Harmonization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-corrections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Data Corrections
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clinical-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clinical Research
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#financial-trading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Financial Trading
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iot-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IoT Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manufacturing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manufacturing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Performance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔮 Future Vision
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔮 Future Vision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sub-spaces-for-data-residency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sub-Spaces for Data Residency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema Evolution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-based-time-travel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event-Based Time-Travel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-value-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Missing Value Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛣️ Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛣️ Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v011-current-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v0.1.1 (Current - MVP) ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 License
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="yetanotherschema">YetAnotherSchema</h1>
+<p><strong>Version:</strong> 0.1.1 MVP<br />
+<strong>Philosophy:</strong> "Values are free ions, not tables. Everything else is a view."</p>
+<p>A semantic database for auditable data with append-only corrections, full traceability, and on-demand views.</p>
+<hr />
+<h2 id="what-is-yetanotherschema">🎯 What is YetAnotherSchema?</h2>
+<p>YetAnotherSchema is a database system designed for domains where data integrity, auditability, and traceability are paramount (clinical research, financial trading, IoT monitoring, etc.).</p>
+<h3 id="the-problem-with-traditional-databases">The Problem with Traditional Databases</h3>
+<p><strong>Example 1: Employee Database</strong></p>
+<p>In traditional databases, values collected once are duplicated everywhere they're needed:</p>
+<pre><code>Traditional Database:
+  payroll table:
+    emp_id | birth_date  | salary
+    E001   | 1990-05-15  | 75000
+
+  benefits table:
+    emp_id | birth_date  | plan
+    E001   | 1990-05-15  | Premium
+
+  reviews table:
+    emp_id | birth_date  | rating | year
+    E001   | 1990-05-15  | 4.5    | 2024
+    E001   | 1990-05-15  | 4.7    | 2025
+</code></pre>
+<p><strong>Issues:</strong>
+- Birth date collected once at hiring, but duplicated in 4+ places
+- If birth date was entered incorrectly, you'd need to update multiple tables
+- Data integrity issues (what if payroll has 1990-05-15 but benefits has 1990-05-16?)
+- Massive storage waste when values appear in hundreds of contexts</p>
+<p><strong>Example 2: Product Catalog</strong></p>
+<pre><code>Traditional Database:
+  orders table:
+    order_id | product_id | product_weight | quantity
+    ORD001   | PROD123    | 2.5 kg        | 1
+    ORD002   | PROD123    | 2.5 kg        | 2
+    ORD003   | PROD123    | 2.5 kg        | 1
+    # Product weight duplicated for every order!
+</code></pre>
+<p><strong>Issues:</strong>
+- Product weight measured once, but duplicated for every order
+- If weight was measured incorrectly, you'd need to update thousands of order records
+- No history of when the weight was corrected</p>
+<h3 id="the-yetanotherschema-solution">The YetAnotherSchema Solution</h3>
+<p>Values are stored once, contexts map to them:</p>
+<p><strong>Example 1: Employee Database</strong></p>
+<pre><code>values table:
+  value_id | field      | raw_value  | created_timestamp
+  1        | birth_date | 1990-05-15 | 2020-01-10 09:00
+  2        | salary     | 75000      | 2020-01-10 09:05
+  3        | salary     | 80000      | 2024-01-15 10:00
+
+context_relationships table:
+  context_key                | field      | value_id
+  emp_id=E001,context=payroll| birth_date | 1  # Same birth_date!
+  emp_id=E001,context=payroll| salary     | 3  # Latest salary
+  emp_id=E001,context=benefits| birth_date| 1  # Same birth_date!
+  emp_id=E001,context=review_2024| birth_date| 1  # Same birth_date!
+  emp_id=E001,context=review_2025| birth_date| 1  # Same birth_date!
+</code></pre>
+<p><strong>Example 2: Product Catalog</strong></p>
+<pre><code>values table:
+  value_id | field  | raw_value | created_timestamp
+  1        | weight | 2.5       | 2025-01-01 08:00
+  2        | price  | 49.99     | 2025-01-01 08:05
+  3        | price  | 44.99     | 2025-01-15 10:00  # Price change
+
+context_relationships table:
+  context_key                    | field  | value_id
+  product_id=PROD123,order=ORD001| weight | 1  # Same weight!
+  product_id=PROD123,order=ORD001| price  | 2
+  product_id=PROD123,order=ORD002| weight | 1  # Same weight!
+  product_id=PROD123,order=ORD002| price  | 2
+  product_id=PROD123,order=ORD003| weight | 1  # Same weight!
+  product_id=PROD123,order=ORD003| price  | 3  # New price
+</code></pre>
+<p><strong>Benefits:</strong>
+- ✅ Values collected once, stored once, referenced many times
+- ✅ Birth date stored once, appears in 4+ contexts (no duplication)
+- ✅ Product weight stored once, appears in 1000+ orders (no duplication)
+- ✅ Corrections create new values (append-only)
+- ✅ Full audit trail preserved
+- ✅ Single source of truth
+- ✅ Massive storage savings</p>
+<hr />
+<h2 id="core-philosophy">🧬 Core Philosophy</h2>
+<h3 id="values-are-free-ions-not-tables-everything-else-is-a-view">"Values are free ions, not tables. Everything else is a view."</h3>
+<p>This philosophy means:</p>
+<ol>
+<li><strong>Values are atomic and independent</strong> - Like ions in chemistry, values exist independently and can bond with different contexts</li>
+<li><strong>No forced structure</strong> - Values aren't locked into rigid table structures</li>
+<li><strong>Context creates meaning</strong> - The same value can exist in multiple contexts</li>
+<li><strong>Views are computed on-demand</strong> - Traditional tables are materialized when needed, never stored</li>
+<li><strong>Append-only corrections</strong> - Corrections create new values, preserving history</li>
+<li><strong>Full traceability</strong> - Every value knows when it was created and by whom</li>
+</ol>
+<h3 id="key-principles">Key Principles</h3>
+<ol>
+<li><strong>Values are atomic</strong> - No duplication, stored once</li>
+<li><strong>Append-only</strong> - Corrections create new entries, never delete</li>
+<li><strong>Context-driven</strong> - Values exist in contexts (subject, visit, site, etc.)</li>
+<li><strong>On-demand views</strong> - Traditional tables are computed when needed</li>
+<li><strong>Full audit trail</strong> - Every change is tracked with timestamps</li>
+<li><strong>Metadata is informational</strong> - No validation, user can enter anything (frontend validates)</li>
+<li><strong>User metadata wins</strong> - Enables unit harmonization (cm → inches)</li>
+</ol>
+<h3 id="three-sphere-architecture">Three-Sphere Architecture</h3>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│                    YetAnotherSchema                         │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  ┌──────────────────────────────────────────────────────┐  │
+│  │  Outer Sphere: Expressions (Computed)                │  │
+│  │  - BMI, derived metrics                              │  │
+│  │  - Polars expressions                                │  │
+│  │  - Never materialized                                │  │
+│  └──────────────────────────────────────────────────────┘  │
+│                          ▲                                  │
+│                          │                                  │
+│  ┌──────────────────────────────────────────────────────┐  │
+│  │  Middle Sphere: Relationships (DuckDB)               │  │
+│  │  - context_relationships table                       │  │
+│  │  - Indexed for fast lookups                          │  │
+│  │  - Maps contexts → value indices                     │  │
+│  └──────────────────────────────────────────────────────┘  │
+│                          ▲                                  │
+│                          │                                  │
+│  ┌──────────────────────────────────────────────────────┐  │
+│  │  Inner Sphere: Values (DuckDB)                       │  │
+│  │  - values table (append-only)                        │  │
+│  │  - Columnar storage                                  │  │
+│  │  - Full audit trail                                  │  │
+│  └──────────────────────────────────────────────────────┘  │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+</code></pre>
+<hr />
+<h2 id="real-world-examples">🌟 Real-World Examples</h2>
+<h3 id="example-1-employee-database-no-duplication">Example 1: Employee Database - No Duplication</h3>
+<p>An employee's birth date is collected once at hiring, but needs to appear in payroll, benefits, and performance reviews.</p>
+<p><strong>Traditional Database:</strong></p>
+<pre><code class="language-sql">-- Birth date duplicated in every table
+INSERT INTO payroll VALUES ('E001', '1990-05-15', 75000);
+INSERT INTO benefits VALUES ('E001', '1990-05-15', 'Premium');
+INSERT INTO reviews VALUES ('E001', '1990-05-15', 4.5, 2024);
+INSERT INTO reviews VALUES ('E001', '1990-05-15', 4.7, 2025);
+
+-- Problem: Birth date stored 4 times! If it was wrong, update 4 places.
+</code></pre>
+<p><strong>YetAnotherSchema:</strong></p>
+<pre><code class="language-python"># Birth date stored once
+ys.write(
+    space_name='hr_system',
+    field='birth_date',
+    value={'raw_value': '1990-05-15', 'user_id': 'hr_admin'},
+    contexts={'emp_id': 'E001'}
+)
+
+# Reference birth date in payroll context
+ys.write(
+    space_name='hr_system',
+    field='salary',
+    value={'raw_value': 75000, 'user_id': 'payroll_admin'},
+    contexts={'emp_id': 'E001', 'context': 'payroll'}
+)
+
+# Reference birth date in benefits context
+ys.write(
+    space_name='hr_system',
+    field='plan',
+    value={'raw_value': 'Premium', 'user_id': 'benefits_admin'},
+    contexts={'emp_id': 'E001', 'context': 'benefits'}
+)
+
+# Reference birth date in review contexts
+ys.write(
+    space_name='hr_system',
+    field='rating',
+    value={'raw_value': 4.5, 'user_id': 'manager_001'},
+    contexts={'emp_id': 'E001', 'context': 'review', 'year': '2024'}
+)
+
+ys.write(
+    space_name='hr_system',
+    field='rating',
+    value={'raw_value': 4.7, 'user_id': 'manager_001'},
+    contexts={'emp_id': 'E001', 'context': 'review', 'year': '2025'}
+)
+
+# Query payroll view (birth_date appears automatically)
+df = ys.read(
+    space_name='hr_system',
+    fields=['emp_id', 'birth_date', 'salary'],
+    contexts={'context': 'payroll'}
+)
+# ┌────────┬────────────┬────────┐
+# │ emp_id │ birth_date │ salary │
+# ├────────┼────────────┼────────┤
+# │ E001   │ 1990-05-15 │ 75000  │
+# └────────┴────────────┴────────┘
+
+# Query reviews view (birth_date appears automatically)
+df = ys.read(
+    space_name='hr_system',
+    fields=['emp_id', 'birth_date', 'rating', 'year'],
+    contexts={'context': 'review'}
+)
+# ┌────────┬────────────┬────────┬──────┐
+# │ emp_id │ birth_date │ rating │ year │
+# ├────────┼────────────┼────────┼──────┤
+# │ E001   │ 1990-05-15 │ 4.5    │ 2024 │
+# │ E001   │ 1990-05-15 │ 4.7    │ 2025 │
+# └────────┴────────────┴────────┴──────┘
+</code></pre>
+<p><strong>Benefits:</strong>
+- ✅ Birth date stored once, appears in 4+ contexts
+- ✅ If birth date was wrong, correct it once (not 4 times)
+- ✅ Full audit trail of correction
+- ✅ No duplication, no data integrity issues</p>
+<h3 id="example-2-product-catalog-massive-savings">Example 2: Product Catalog - Massive Savings</h3>
+<p>A product's weight is measured once, but appears in thousands of orders.</p>
+<p><strong>Traditional Database:</strong></p>
+<pre><code class="language-sql">-- Product weight duplicated for every order
+INSERT INTO orders VALUES ('ORD001', 'PROD123', 2.5, 1);
+INSERT INTO orders VALUES ('ORD002', 'PROD123', 2.5, 2);
+INSERT INTO orders VALUES ('ORD003', 'PROD123', 2.5, 1);
+-- ... 1000 more orders ...
+
+-- Problem: Weight stored 1000+ times! If it was wrong, update 1000+ rows.
+</code></pre>
+<p><strong>YetAnotherSchema:</strong></p>
+<pre><code class="language-python"># Product weight stored once
+ys.write(
+    space_name='ecommerce',
+    field='weight',
+    value={'raw_value': 2.5, 'metadata': {'unit': 'kg'}, 'user_id': 'warehouse_admin'},
+    contexts={'product_id': 'PROD123'}
+)
+
+# Create orders (weight is referenced, not duplicated)
+ys.write(
+    space_name='ecommerce',
+    field='quantity',
+    value={'raw_value': 1, 'user_id': 'customer_001'},
+    contexts={'product_id': 'PROD123', 'order_id': 'ORD001'}
+)
+
+ys.write(
+    space_name='ecommerce',
+    field='quantity',
+    value={'raw_value': 2, 'user_id': 'customer_002'},
+    contexts={'product_id': 'PROD123', 'order_id': 'ORD002'}
+)
+
+ys.write(
+    space_name='ecommerce',
+    field='quantity',
+    value={'raw_value': 1, 'user_id': 'customer_003'},
+    contexts={'product_id': 'PROD123', 'order_id': 'ORD003'}
+)
+
+# Query orders (weight appears automatically for each order)
+df = ys.read(
+    space_name='ecommerce',
+    fields=['order_id', 'product_id', 'weight', 'quantity'],
+    contexts={'product_id': 'PROD123'}
+)
+# ┌──────────┬────────────┬────────┬──────────┐
+# │ order_id │ product_id │ weight │ quantity │
+# ├──────────┼────────────┼────────┼──────────┤
+# │ ORD001   │ PROD123    │ 2.5    │ 1        │
+# │ ORD002   │ PROD123    │ 2.5    │ 2        │
+# │ ORD003   │ PROD123    │ 2.5    │ 1        │
+# └──────────┴────────────┴────────┴──────────┘
+
+# If weight was measured incorrectly, correct it once
+ys.write(
+    space_name='ecommerce',
+    field='weight',
+    value={'raw_value': 2.3, 'metadata': {'unit': 'kg', 'note': 'remeasured'}, 'user_id': 'warehouse_admin'},
+    contexts={'product_id': 'PROD123'}
+)
+
+# All orders now show corrected weight automatically
+df = ys.read(
+    space_name='ecommerce',
+    fields=['order_id', 'product_id', 'weight', 'quantity'],
+    contexts={'product_id': 'PROD123'}
+)
+# ┌──────────┬────────────┬────────┬──────────┐
+# │ order_id │ product_id │ weight │ quantity │
+# ├──────────┼────────────┼────────┼──────────┤
+# │ ORD001   │ PROD123    │ 2.3    │ 1        │  # Updated!
+# │ ORD002   │ PROD123    │ 2.3    │ 2        │  # Updated!
+# │ ORD003   │ PROD123    │ 2.3    │ 1        │  # Updated!
+# └──────────┴────────────┴────────┴──────────┘
+</code></pre>
+<p><strong>Benefits:</strong>
+- ✅ Weight stored once, appears in 1000+ orders
+- ✅ Correction updates all orders automatically
+- ✅ Full audit trail (both 2.5 and 2.3 preserved)
+- ✅ Massive storage savings (1 value vs 1000+ duplicates)</p>
+<h3 id="example-3-data-correction-with-audit-trail">Example 3: Data Correction with Audit Trail</h3>
+<p>A nurse enters a patient's weight as 500 kg (typo!). Later, they realize the mistake and correct it to 50 kg.</p>
+<p><strong>Traditional Database:</strong></p>
+<pre><code class="language-sql">-- Original entry
+INSERT INTO measurements VALUES ('S001', 'V1', 500);
+
+-- Correction (overwrites original)
+UPDATE measurements SET weight = 50 WHERE subject_id = 'S001' AND visit = 'V1';
+
+-- Problem: Original value (500) is lost! No audit trail.
+</code></pre>
+<p><strong>YetAnotherSchema:</strong></p>
+<pre><code class="language-python"># Original entry (typo)
+ys.write(
+    space_name='clinical_study',
+    field='weight',
+    value={'raw_value': 500, 'user_id': 'nurse_001'},
+    contexts={'subject_id': 'S001', 'visit': 'V1'}
+)
+# created_timestamp: 2026-01-30T09:00:00
+
+# Correction (new entry)
+ys.write(
+    space_name='clinical_study',
+    field='weight',
+    value={'raw_value': 50, 'user_id': 'nurse_001'},
+    contexts={'subject_id': 'S001', 'visit': 'V1'}
+)
+# created_timestamp: 2026-01-30T09:01:00
+
+# Read returns latest value (50)
+df = ys.read(
+    space_name='clinical_study',
+    fields=['subject_id', 'weight'],
+    contexts={'subject_id': 'S001'}
+)
+# weight = 50.0
+
+# Time-travel to see original value (for audit)
+df = ys.read(
+    space_name='clinical_study',
+    fields=['subject_id', 'weight'],
+    contexts={'subject_id': 'S001'},
+    as_of='2026-01-30T09:00:30'  # Before correction
+)
+# weight = 500.0
+</code></pre>
+<p><strong>Benefits:</strong>
+- ✅ Both values preserved (500 and 50)
+- ✅ Full audit trail (who, when, what)
+- ✅ Latest value returned by default
+- ✅ Time-travel for audits
+- ✅ No data loss</p>
+<hr />
+<h2 id="quick-start">🚀 Quick Start</h2>
+<h3 id="installation">Installation</h3>
+<pre><code class="language-bash">pip install duckdb polars toml python-dateutil
+</code></pre>
+<h3 id="basic-usage">Basic Usage</h3>
+<pre><code class="language-python">import yetanotherschema as ys
+
+# 1. Create a space
+ys.create(
+    space_name='clinical_study_001',
+    schema_path='schema.toml'
+)
+
+# 2. Write a value
+ys.write(
+    space_name='clinical_study_001',
+    field='height',
+    value={
+        'raw_value': 170,
+        'metadata': {'unit': 'cm'},
+        'user_id': 'nurse_001'
+    },
+    contexts={'subject_id': 'S001', 'visit': 'V1'}
+)
+
+# 3. Read values
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'visit', 'height', 'weight']
+)
+print(df)
+</code></pre>
+<hr />
+<h2 id="api-reference">📚 API Reference</h2>
+<h3 id="1-create-create-a-space">1. <code>create()</code> - Create a Space</h3>
+<pre><code class="language-python">ys.create(
+    space_name='clinical_study_001',
+    schema_path='schema.toml'
+)
+</code></pre>
+<h3 id="2-write-write-a-value">2. <code>write()</code> - Write a Value</h3>
+<pre><code class="language-python">ys.write(
+    space_name='clinical_study_001',
+    field='height',
+    value={
+        'raw_value': 170,
+        'metadata': {'unit': 'cm', 'device': 'stadiometer'},
+        'reported_timestamp': '2026-01-30T09:00:00',
+        'user_id': 'nurse_001'
+    },
+    contexts={'subject_id': 'S001', 'visit': 'V1'}
+)
+</code></pre>
+<h3 id="3-write_batch-write-multiple-values">3. <code>write_batch()</code> - Write Multiple Values</h3>
+<pre><code class="language-python">ys.write_batch(
+    space_name='clinical_study_001',
+    records=[
+        {
+            'field': 'height',
+            'value': {'raw_value': 170, 'user_id': 'nurse_001'},
+            'contexts': {'subject_id': 'S001', 'visit': 'V1'}
+        },
+        {
+            'field': 'weight',
+            'value': {'raw_value': 70, 'user_id': 'nurse_001'},
+            'contexts': {'subject_id': 'S001', 'visit': 'V1'}
+        }
+    ]
+)
+</code></pre>
+<h3 id="4-read-read-values">4. <code>read()</code> - Read Values</h3>
+<pre><code class="language-python"># Basic read
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'visit', 'height', 'weight']
+)
+
+# With context filter
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'height', 'weight'],
+    contexts={'subject_id': 'S001'}
+)
+
+# With value filters
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'height'],
+    filters={'height': {'gt': 160, 'lt': 180}}
+)
+
+# Time-travel query
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'weight'],
+    as_of='2026-01-15T23:59:59'
+)
+</code></pre>
+<h3 id="5-schema-view-schema">5. <code>schema()</code> - View Schema</h3>
+<pre><code class="language-python"># Summary
+schema_info = ys.schema('clinical_study_001')
+
+# Statistics
+stats = ys.schema('clinical_study_001', detail='stats')
+
+# Full schema
+full_schema = ys.schema('clinical_study_001', detail='full')
+</code></pre>
+<h3 id="6-list_spaces-list-all-spaces">6. <code>list_spaces()</code> - List All Spaces</h3>
+<pre><code class="language-python">spaces = ys.list_spaces()
+for space in spaces:
+    print(f&quot;{space['space_name']}: {space['total_values']} values&quot;)
+</code></pre>
+<hr />
+<h2 id="schema-definition">📝 Schema Definition</h2>
+<p>Create a <code>schema.toml</code> file:</p>
+<pre><code class="language-toml">[metadata]
+name = &quot;clinical_study_001&quot;
+version = &quot;0.1.0&quot;
+
+[contexts]
+# At least one required context
+required = [&quot;subject_id&quot;]
+optional = [&quot;visit&quot;, &quot;site&quot;, &quot;country&quot;]
+
+[hierarchies]
+geographic = [&quot;region&quot;, &quot;country&quot;, &quot;site&quot;]
+lab = [&quot;lab_category&quot;, &quot;lab_subcategory&quot;, &quot;lab_test&quot;]
+
+[values]
+height = { unit = &quot;cm&quot;, type = &quot;numeric&quot;, category = &quot;vital_sign&quot; }
+weight = { unit = &quot;kg&quot;, type = &quot;numeric&quot;, category = &quot;vital_sign&quot; }
+hemoglobin = { unit = &quot;g/dL&quot;, type = &quot;numeric&quot;, category = &quot;lab_result&quot; }
+
+[null_values]
+not_done = &quot;@notdone&quot;
+missing = &quot;@null&quot;
+</code></pre>
+<hr />
+<h2 id="comprehensive-examples">📖 Comprehensive Examples</h2>
+<h3 id="example-1-basic-workflow">Example 1: Basic Workflow</h3>
+<pre><code class="language-python">import yetanotherschema as ys
+
+# Create a space
+ys.create(
+    space_name='clinical_study_001',
+    schema_path='schema.toml'
+)
+
+# Write a value
+ys.write(
+    space_name='clinical_study_001',
+    field='height',
+    value={
+        'raw_value': 170,
+        'metadata': {'unit': 'cm', 'device': 'stadiometer'},
+        'reported_timestamp': '2026-01-30T09:00:00',
+        'user_id': 'nurse_001'
+    },
+    contexts={'subject_id': 'S001', 'visit': 'V1'}
+)
+
+# Read values
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'visit', 'height']
+)
+print(df)
+</code></pre>
+<h3 id="example-2-batch-operations">Example 2: Batch Operations</h3>
+<pre><code class="language-python"># Write multiple values at once
+value_ids = ys.write_batch(
+    space_name='clinical_study_001',
+    records=[
+        {
+            'field': 'height',
+            'value': {'raw_value': 170, 'user_id': 'nurse_001'},
+            'contexts': {'subject_id': 'S001', 'visit': 'V1'}
+        },
+        {
+            'field': 'weight',
+            'value': {'raw_value': 70, 'user_id': 'nurse_001'},
+            'contexts': {'subject_id': 'S001', 'visit': 'V1'}
+        },
+        {
+            'field': 'temperature',
+            'value': {'raw_value': 37.0, 'user_id': 'nurse_001'},
+            'contexts': {'subject_id': 'S001', 'visit': 'V1'}
+        }
+    ]
+)
+print(f&quot;Written {len(value_ids)} values&quot;)
+</code></pre>
+<h3 id="example-3-context-filtering">Example 3: Context Filtering</h3>
+<pre><code class="language-python"># Get all visits for a specific subject
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'visit', 'height', 'weight'],
+    contexts={'subject_id': 'S001'}
+)
+
+# Get specific visit
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'visit', 'height', 'weight'],
+    contexts={'subject_id': 'S001', 'visit': 'V1'}
+)
+
+# Get all subjects from a specific site
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'site', 'height', 'weight'],
+    contexts={'site': 'Boston'}
+)
+</code></pre>
+<h3 id="example-4-value-filtering">Example 4: Value Filtering</h3>
+<pre><code class="language-python"># Numeric filters
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'height'],
+    filters={'height': {'gt': 160, 'lt': 180}}
+)
+
+# Multiple conditions
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'height', 'weight'],
+    filters={
+        'height': {'gte': 165, 'lte': 175},
+        'weight': {'gte': 50, 'lte': 100}
+    }
+)
+
+# Text filtering
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'adverse_event'],
+    filters={'adverse_event': {'contains': 'headache'}}
+)
+</code></pre>
+<h3 id="example-5-data-corrections">Example 5: Data Corrections</h3>
+<pre><code class="language-python"># Original entry (typo)
+ys.write(
+    space_name='clinical_study_001',
+    field='weight',
+    value={
+        'raw_value': 500,  # Typo!
+        'metadata': {'unit': 'kg', 'note': 'data_entry_error'},
+        'reported_timestamp': '2026-01-30T09:00:00',
+        'user_id': 'nurse_001'
+    },
+    contexts={'subject_id': 'S001', 'visit': 'V1'}
+)
+
+# Correction (new entry)
+ys.write(
+    space_name='clinical_study_001',
+    field='weight',
+    value={
+        'raw_value': 50,  # Corrected
+        'metadata': {'unit': 'kg', 'note': 'corrected_typo'},
+        'reported_timestamp': '2026-01-30T09:00:00',  # Same reported time
+        'user_id': 'nurse_001'
+    },
+    contexts={'subject_id': 'S001', 'visit': 'V1'}
+)
+
+# Read returns latest value (50)
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'weight'],
+    contexts={'subject_id': 'S001'}
+)
+# weight = 50.0
+</code></pre>
+<h3 id="example-6-time-travel-queries">Example 6: Time-Travel Queries</h3>
+<pre><code class="language-python"># View data as it existed on a specific date
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'weight'],
+    contexts={'subject_id': 'S001'},
+    as_of='2026-01-30T09:00:30'  # Before correction
+)
+# weight = 500.0 (shows typo)
+
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'weight'],
+    contexts={'subject_id': 'S001'},
+    as_of='2026-01-30T09:01:30'  # After correction
+)
+# weight = 50.0 (shows corrected value)
+</code></pre>
+<h3 id="example-7-metadata-inclusion">Example 7: Metadata Inclusion</h3>
+<pre><code class="language-python"># Read with metadata
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'height', 'weight'],
+    contexts={'subject_id': 'S001'},
+    include_metadata=True
+)
+
+# DataFrame includes metadata column with all metadata for each field
+print(df)
+# ┌────────────┬────────┬────────┬──────────────────────────────┐
+# │ subject_id │ height │ weight │ metadata                     │
+# │ ---        │ ---    │ ---    │ ---                          │
+# │ str        │ f64    │ f64    │ struct                       │
+# ╞════════════╪════════╪════════╪══════════════════════════════╡
+# │ S001       │ 170.0  │ 70.0   │ {height: {unit: cm, ...},    │
+# │            │        │        │  weight: {unit: kg, ...}}    │
+# └────────────┴────────┴────────┴──────────────────────────────┘
+</code></pre>
+<h3 id="example-8-schema-inspection">Example 8: Schema Inspection</h3>
+<pre><code class="language-python"># Summary view
+schema_info = ys.schema('clinical_study_001')
+print(schema_info)
+# {
+#     'space_name': 'clinical_study_001',
+#     'schema_version': '0.1.0',
+#     'contexts': {
+#         'required': ['subject_id'],
+#         'optional': ['visit', 'site']
+#     },
+#     'value_fields': ['height', 'weight', 'temperature']
+# }
+
+# Statistics
+stats = ys.schema('clinical_study_001', detail='stats')
+print(stats)
+# {
+#     'total_values': 1500,
+#     'unique_contexts': 250,
+#     'value_fields': 12
+# }
+
+# Full schema
+full_schema = ys.schema('clinical_study_001', detail='full')
+</code></pre>
+<h3 id="example-9-multi-site-study">Example 9: Multi-Site Study</h3>
+<pre><code class="language-python"># Collect data from multiple sites
+ys.write(
+    space_name='global_study',
+    field='height',
+    value={'raw_value': 170, 'user_id': 'nurse_boston_001'},
+    contexts={'subject_id': 'S001', 'visit': 'V1', 'site': 'Boston'}
+)
+
+ys.write(
+    space_name='global_study',
+    field='height',
+    value={'raw_value': 165, 'user_id': 'nurse_ny_001'},
+    contexts={'subject_id': 'S002', 'visit': 'V1', 'site': 'New York'}
+)
+
+# Query by site
+df_boston = ys.read(
+    space_name='global_study',
+    fields=['subject_id', 'site', 'height'],
+    contexts={'site': 'Boston'}
+)
+
+# Query all sites
+df_all = ys.read(
+    space_name='global_study',
+    fields=['subject_id', 'site', 'height']
+)
+</code></pre>
+<h3 id="example-10-unit-harmonization">Example 10: Unit Harmonization</h3>
+<pre><code class="language-python"># User enters height in inches (overrides schema default of cm)
+ys.write(
+    space_name='clinical_study_001',
+    field='height',
+    value={
+        'raw_value': 67,  # inches
+        'metadata': {
+            'unit': 'inches',  # User overrides schema (cm)
+            'device': 'tape_measure'
+        },
+        'user_id': 'nurse_001'
+    },
+    contexts={'subject_id': 'S001', 'visit': 'V1'}
+)
+
+# Later, use Additory or custom logic to harmonize units
+# This is why user metadata wins - enables unit conversion
+</code></pre>
+<hr />
+<h2 id="data-corrections">🔧 Data Corrections</h2>
+<p>YetAnotherSchema uses append-only corrections:</p>
+<pre><code class="language-python"># Original entry (typo)
+ys.write(
+    space_name='clinical_study_001',
+    field='weight',
+    value={'raw_value': 500, 'user_id': 'nurse_001'},  # Typo!
+    contexts={'subject_id': 'S001', 'visit': 'V1'}
+)
+# created_timestamp: 2026-01-30T09:00:00
+
+# Correction (new entry)
+ys.write(
+    space_name='clinical_study_001',
+    field='weight',
+    value={'raw_value': 50, 'user_id': 'nurse_001'},  # Corrected
+    contexts={'subject_id': 'S001', 'visit': 'V1'}
+)
+# created_timestamp: 2026-01-30T09:01:00
+
+# Read returns latest value (50)
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'weight'],
+    contexts={'subject_id': 'S001'}
+)
+# weight = 50.0
+
+# Time-travel to see original value
+df = ys.read(
+    space_name='clinical_study_001',
+    fields=['subject_id', 'weight'],
+    contexts={'subject_id': 'S001'},
+    as_of='2026-01-30T09:00:30'  # Before correction
+)
+# weight = 500.0
+</code></pre>
+<hr />
+<h2 id="use-cases">🎯 Use Cases</h2>
+<h3 id="clinical-research">Clinical Research</h3>
+<ul>
+<li>Multi-site trials</li>
+<li>Regulatory compliance</li>
+<li>Data corrections with audit trail</li>
+<li>Time-travel queries for audits</li>
+</ul>
+<h3 id="financial-trading">Financial Trading</h3>
+<ul>
+<li>Trade history</li>
+<li>Price corrections</li>
+<li>Regulatory reporting</li>
+<li>Audit trails</li>
+</ul>
+<h3 id="iot-monitoring">IoT Monitoring</h3>
+<ul>
+<li>Sensor readings</li>
+<li>Device calibrations</li>
+<li>Historical analysis</li>
+<li>Anomaly detection</li>
+</ul>
+<h3 id="manufacturing">Manufacturing</h3>
+<ul>
+<li>Quality control</li>
+<li>Batch tracking</li>
+<li>Equipment monitoring</li>
+<li>Compliance reporting</li>
+</ul>
+<hr />
+<h2 id="testing">🧪 Testing</h2>
+<p>Run the test suite:</p>
+<pre><code class="language-bash"># Basic tests
+python test_basic.py
+
+# Advanced tests
+python test_advanced.py
+
+# Example usage
+python example_usage.py
+</code></pre>
+<hr />
+<h2 id="performance">📊 Performance</h2>
+<p>Current MVP performance (DuckDB + Polars):</p>
+<ul>
+<li><strong>Write</strong>: &lt; 1ms per value</li>
+<li><strong>Batch write</strong>: &lt; 100ms for 1000 values</li>
+<li><strong>Simple query</strong>: &lt; 10ms</li>
+<li><strong>Complex query</strong>: &lt; 50ms</li>
+<li><strong>Storage</strong>: Columnar compression</li>
+</ul>
+<hr />
+<h2 id="future-vision">🔮 Future Vision</h2>
+<h3 id="sub-spaces-for-data-residency">Sub-Spaces for Data Residency</h3>
+<p>Enable distributed data storage while maintaining centralized relationships:</p>
+<pre><code class="language-python"># Main space (corporate HQ - USA)
+ys.create(
+    space_name='global_study',
+    schema_path='schema.toml'
+)
+
+# Sub-space for EU data (values only, no relationships)
+ys.create_subspace(
+    parent_space='global_study',
+    subspace_name='global_study_eu',
+    storage_path='/eu_datacenter/global_study_eu.db',
+    mode='values_only'  # Only value store, no relationships
+)
+
+# Sub-space for Asia data
+ys.create_subspace(
+    parent_space='global_study',
+    subspace_name='global_study_asia',
+    storage_path='/asia_datacenter/global_study_asia.db',
+    mode='values_only'
+)
+
+# Write to EU sub-space (data stays in EU)
+ys.write(
+    space_name='global_study_eu',
+    field='height',
+    value={...},
+    contexts={'subject_id': 'EU_S001', 'country': 'Germany'}
+)
+
+# Read from main space (combines all sub-spaces + relationships)
+df = ys.read(
+    space_name='global_study',  # Automatically queries all sub-spaces
+    fields=['subject_id', 'country', 'height', 'weight']
+)
+# Result includes data from USA, EU, Asia sub-spaces
+# Relationships and expressions applied at main space level
+</code></pre>
+<p><strong>Use Cases:</strong>
+- GDPR compliance (EU data stays in EU)
+- Data sovereignty (country-specific regulations)
+- Performance (data closer to users)
+- Disaster recovery (distributed backups)</p>
+<h3 id="authentication-system">Authentication System</h3>
+<p>Pattern-based authentication with audit trail:</p>
+<pre><code class="language-python"># Every write includes auth_key
+ys.write(
+    space_name='clinical_study',
+    field='height',
+    value={
+        'raw_value': 170,
+        'user_id': 'nurse_001',
+        'auth_key': 'ys_v1_user_nurse001_ts_20260130_counter_00042_sig_a3f9d2'
+    },
+    contexts={'subject_id': 'S001'}
+)
+
+# Auth key structure:
+# ys_v1_user_{user_id}_ts_{timestamp}_counter_{counter}_sig_{signature}
+#
+# - version: v1
+# - user_id: nurse001
+# - timestamp: 20260130 (date)
+# - counter: 00042 (increments with each write)
+# - signature: cryptographic signature
+
+# Internal counter tracking
+# Every write with this user_id increments counter
+# Enables audit: &quot;nurse_001 made 42 writes today&quot;
+
+# Read operations also audited
+df = ys.read(
+    space_name='clinical_study',
+    fields=['subject_id', 'height', 'weight'],
+    auth_key='ys_v1_user_analyst001_ts_20260130_counter_00015_sig_b7e4c1'
+)
+# System logs: &quot;analyst001 read height/weight data at 2026-01-30 10:30:00&quot;
+</code></pre>
+<p><strong>Features:</strong>
+- Pattern-based key generation
+- Incremental counters for audit
+- Read/write audit trail
+- No open/close connection workflow
+- Cryptographic signatures</p>
+<h3 id="schema-evolution">Schema Evolution</h3>
+<p>Modify schema without breaking existing data:</p>
+<pre><code class="language-python"># Add new field to existing space
+ys.create(
+    space_name='clinical_study',
+    mode='modify',
+    add_fields={
+        'blood_pressure': {
+            'unit': 'mmHg',
+            'type': 'numeric',
+            'category': 'vital_sign'
+        }
+    }
+)
+
+# Remove field (flag as hidden, don't delete data)
+ys.create(
+    space_name='clinical_study',
+    mode='modify',
+    hide_fields=['old_field']
+)
+</code></pre>
+<p><strong>Use Cases:</strong>
+- Protocol amendments in clinical trials
+- Evolving data requirements
+- Backward compatibility
+- Gradual migrations</p>
+<h3 id="event-based-time-travel">Event-Based Time-Travel</h3>
+<p>Query data as of a specific event, not just timestamp:</p>
+<pre><code class="language-python"># Time-travel using reported_timestamp (event time)
+df = ys.read(
+    space_name='clinical_study',
+    fields=['subject_id', 'weight'],
+    as_of_event='2026-01-15',  # Uses reported_timestamp
+    contexts={'subject_id': 'S001'}
+)
+
+# vs. created_timestamp (system time)
+df = ys.read(
+    space_name='clinical_study',
+    fields=['subject_id', 'weight'],
+    as_of='2026-01-15T23:59:59',  # Uses created_timestamp
+    contexts={'subject_id': 'S001'}
+)
+</code></pre>
+<p><strong>Use Cases:</strong>
+- "What was the patient's weight on visit day?"
+- "Show me data as of the database lock date"
+- Event-driven queries vs. system-driven queries</p>
+<h3 id="missing-value-strategies">Missing Value Strategies</h3>
+<p>Handle missing data with semantic meaning:</p>
+<pre><code class="language-python"># Schema defines missing value codes
+[null_values]
+not_done = &quot;@notdone&quot;      # Test not performed
+missing = &quot;@null&quot;          # Data missing
+refused = &quot;@refused&quot;       # Patient refused
+not_applicable = &quot;@na&quot;     # Not applicable
+
+# Write with missing value code
+ys.write(
+    space_name='clinical_study',
+    field='blood_pressure',
+    value={
+        'raw_value': '@notdone',
+        'metadata': {'reason': 'equipment_malfunction'},
+        'user_id': 'nurse_001'
+    },
+    contexts={'subject_id': 'S001', 'visit': 'V1'}
+)
+
+# Query distinguishes between different types of missing
+df = ys.read(
+    space_name='clinical_study',
+    fields=['subject_id', 'blood_pressure'],
+    filters={'blood_pressure': {'eq': '@notdone'}}
+)
+</code></pre>
+<h2 id="roadmap">🛣️ Roadmap</h2>
+<h3 id="v011-current-mvp">v0.1.1 (Current - MVP) ✅</h3>
+<ul>
+<li>✅ Basic CRUD operations</li>
+<li>✅ Append-only corrections</li>
+<li>✅ Context filtering</li>
+<li>✅ Value filtering</li>
+<li>✅ Time-travel queries (created_timestamp)</li>
+<li>✅ DuckDB + Polars backend</li>
+<li>✅ Schema validation</li>
+<li>✅ Batch operations</li>
+<li>✅ Complete dependency management</li>
+</ul>
+<h3 id="future">Future</h3>
+<ul>
+<li>[ ] Expression engine (BMI, derived metrics)</li>
+<li>[ ] Hierarchical queries (site → country → region)</li>
+<li>[ ] Performance optimizations</li>
+<li>[ ] Query caching</li>
+<li>[ ] Batch operations optimization</li>
+<li>[ ] More comprehensive tests</li>
+<li>[ ] Authentication system (auth_key)</li>
+<li>[ ] Read audit trail</li>
+<li>[ ] Sub-spaces (data residency)</li>
+<li>[ ] Schema evolution</li>
+<li>[ ] Event-based time-travel (reported_timestamp)</li>
+<li>[ ] Missing value strategies</li>
+<li>[ ] Blinded/unblinded separation</li>
+<li>[ ] Multi-user access control</li>
+<li>[ ] Advanced filtering (OR, AND, NOT)</li>
+<li>[ ] Aggregation functions</li>
+<li>[ ] Export to traditional formats</li>
+</ul>
+<p><strong>Current Status:</strong> MVP (v0.1.1) - Minimum Viable Product ready for use</p>
+<p><strong>Ready For:</strong>
+- Development and testing
+- Small to medium datasets
+- Proof of concept projects
+- Learning and experimentation</p>
+<p><strong>Not Ready For:</strong>
+- Large-scale production use (optimization pending)
+- Mission-critical systems (more testing needed)
+- High-performance requirements (caching not yet implemented)</p>
+<hr />
+<h2 id="license">📄 License</h2>
+<p>MIT License</p>
+<hr />
+<p><strong>Philosophy:</strong>
+"Values are free ions, not tables. Everything else is a view."</p>
+<p>This is not just a database - it's a different way of thinking about data.</p>
+<hr />
+<p><strong>Philosophy:</strong> "Values are free ions, not tables. Everything else is a view."</p>
+<p><strong>Status:</strong> MVP <br />
+<strong>Next:</strong> Expression engine and hierarchical queries  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.top", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

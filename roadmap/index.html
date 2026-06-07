@@ -1,0 +1,1517 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A semantic database for auditable data with append-only corrections and full traceability">
+      
+      
+      
+        <link rel="canonical" href="https://sekarkrishna.github.io/yetanotherschema/roadmap/">
+      
+      
+        <link rel="prev" href="../examples/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Roadmap - YetAnotherSchema</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#yetanotherschema-development-roadmap" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="YetAnotherSchema" class="md-header__button md-logo" aria-label="YetAnotherSchema" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            YetAnotherSchema
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Roadmap
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sekarkrishna/yetanotherschema" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sekarkrishna/yetanotherschema
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="YetAnotherSchema" class="md-nav__button md-logo" aria-label="YetAnotherSchema" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    YetAnotherSchema
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sekarkrishna/yetanotherschema" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sekarkrishna/yetanotherschema
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Vision
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📅 Development Phases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📅 Development Phases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-0-proof-of-concept-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Phase 0: Proof of Concept (Complete)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-mvp-in-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚧 Phase 1: MVP (In Progress)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-alpha-release-v010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Alpha Release (v0.1.0)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-beta-release-v020" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Beta Release (v0.2.0)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-stable-release-v100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: Stable Release (v1.0.0)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-5-ecosystem-v200" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 5: Ecosystem (v2.0.0+)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-6-academic-maturity-v300" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 6: Academic Maturity (v3.0.0+)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#research-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎓 Research Questions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎓 Research Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#short-term-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Short-term (2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medium-term-2027-2028" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medium-term (2027-2028)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-term-2029-2031" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Long-term (2029-2031)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target-industries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏢 Target Industries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏢 Target Industries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primary (2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-2027-2028" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secondary (2027-2028)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tertiary-2029" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tertiary (2029+)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Success Metrics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Success Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adoption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adoption
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#academic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Academic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#immediate-next-steps-this-week" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Immediate Next Steps (This Week)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Immediate Next Steps (This Week)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#day-1-core-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Day 1: Core Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-2-query-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Day 2: Query Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-3-testing-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Day 3: Testing &amp; Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Key Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collaboration-opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤝 Collaboration Opportunities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🤝 Collaboration Opportunities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#academic_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Academic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#industry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Industry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Vision
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📅 Development Phases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📅 Development Phases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-0-proof-of-concept-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Phase 0: Proof of Concept (Complete)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-mvp-in-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚧 Phase 1: MVP (In Progress)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-alpha-release-v010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Alpha Release (v0.1.0)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-beta-release-v020" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Beta Release (v0.2.0)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-stable-release-v100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: Stable Release (v1.0.0)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-5-ecosystem-v200" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 5: Ecosystem (v2.0.0+)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-6-academic-maturity-v300" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 6: Academic Maturity (v3.0.0+)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#research-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎓 Research Questions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎓 Research Questions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#short-term-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Short-term (2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medium-term-2027-2028" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medium-term (2027-2028)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-term-2029-2031" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Long-term (2029-2031)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target-industries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏢 Target Industries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏢 Target Industries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primary (2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-2027-2028" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secondary (2027-2028)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tertiary-2029" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tertiary (2029+)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Success Metrics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Success Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adoption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adoption
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#academic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Academic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#immediate-next-steps-this-week" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Immediate Next Steps (This Week)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Immediate Next Steps (This Week)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#day-1-core-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Day 1: Core Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-2-query-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Day 2: Query Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-3-testing-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Day 3: Testing &amp; Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Key Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collaboration-opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🤝 Collaboration Opportunities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🤝 Collaboration Opportunities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#academic_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Academic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#industry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Industry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="yetanotherschema-development-roadmap">YetAnotherSchema - Development Roadmap</h1>
+<p><strong>Project:</strong> Semantic Database for Auditable Data<br />
+<strong>Timeline:</strong> 5-10 years to academic maturity<br />
+<strong>Current Phase:</strong> MVP Development</p>
+<hr />
+<h2 id="vision">🎯 Vision</h2>
+<p>Build a universal semantic database that eliminates transformation cascades while maintaining full auditability and traceability.</p>
+<p><strong>Core Philosophy:</strong> "Values are free ions, not tables. Everything else is a view."</p>
+<hr />
+<h2 id="development-phases">📅 Development Phases</h2>
+<h3 id="phase-0-proof-of-concept-complete">✅ Phase 0: Proof of Concept (Complete)</h3>
+<p><strong>Duration:</strong> 1 day<br />
+<strong>Status:</strong> ✅ Complete (January 30, 2026)</p>
+<p><strong>Deliverables:</strong>
+- [x] Pandas-based implementation
+- [x] Three-sphere model validation
+- [x] 7 passing tests
+- [x] Clinical research example
+- [x] Documentation</p>
+<p><strong>Key Learnings:</strong>
+- Concept is sound
+- Implementation is feasible
+- Benefits are real (no duplication, full traceability)
+- Trade-offs are acceptable</p>
+<hr />
+<h3 id="phase-1-mvp-in-progress">🚧 Phase 1: MVP (In Progress)</h3>
+<p><strong>Duration:</strong> 3 days<br />
+<strong>Target:</strong> February 2026<br />
+<strong>Status:</strong> 📋 Design Complete</p>
+<p><strong>Goals:</strong>
+1. Persistent storage (DuckDB)
+2. Vectorized operations (Polars)
+3. Scale testing (10,000+ values)
+4. Production-ready API</p>
+<p><strong>Deliverables:</strong>
+- [ ] DuckDB schema and tables
+- [ ] Core components (ValueStore, RelationshipStore, QueryEngine)
+- [ ] Main API (YetAnotherSchema class)
+- [ ] Unit tests (&gt;90% coverage)
+- [ ] Integration tests
+- [ ] Performance benchmarks
+- [ ] API documentation
+- [ ] Usage examples</p>
+<p><strong>Success Criteria:</strong>
+- Handles 10,000+ values efficiently
+- Query performance &lt; 100ms for complex queries
+- Clean, documented API
+- All PoC features working</p>
+<hr />
+<h3 id="phase-2-alpha-release-v010">Phase 2: Alpha Release (v0.1.0)</h3>
+<p><strong>Duration:</strong> 2 weeks<br />
+<strong>Target:</strong> March 2026</p>
+<p><strong>Goals:</strong>
+1. Package for PyPI
+2. Real-world testing
+3. Community feedback</p>
+<p><strong>Deliverables:</strong>
+- [ ] PyPI package (yetanotherschema)
+- [ ] Comprehensive documentation
+- [ ] Tutorial notebooks
+- [ ] Example projects (clinical, IoT, finance)
+- [ ] Performance comparison study
+- [ ] Blog post / announcement</p>
+<p><strong>Features:</strong>
+- [ ] Time-travel queries (<code>as_of</code> parameter)
+- [ ] Null semantics (<code>@null</code>, <code>@notdone</code>, etc.)
+- [ ] Batch operations API
+- [ ] Query caching
+- [ ] Schema validation
+- [ ] Error handling &amp; logging</p>
+<hr />
+<h3 id="phase-3-beta-release-v020">Phase 3: Beta Release (v0.2.0)</h3>
+<p><strong>Duration:</strong> 1-2 months<br />
+<strong>Target:</strong> Q2 2026</p>
+<p><strong>Goals:</strong>
+1. Production hardening
+2. Advanced features
+3. Performance optimization</p>
+<p><strong>Deliverables:</strong>
+- [ ] Expression language (safe, not eval-based)
+- [ ] Hierarchical query optimization
+- [ ] Transaction semantics
+- [ ] Concurrent write handling
+- [ ] Schema evolution strategies
+- [ ] Migration tools
+- [ ] CLI tool
+- [ ] Web UI (optional)</p>
+<p><strong>Performance Targets:</strong>
+- 100,000+ values
+- Sub-second complex queries
+- Efficient storage (compression)</p>
+<hr />
+<h3 id="phase-4-stable-release-v100">Phase 4: Stable Release (v1.0.0)</h3>
+<p><strong>Duration:</strong> 3-6 months<br />
+<strong>Target:</strong> Q3-Q4 2026</p>
+<p><strong>Goals:</strong>
+1. Production-ready
+2. Industry adoption
+3. Academic validation</p>
+<p><strong>Deliverables:</strong>
+- [ ] Stable API (semantic versioning)
+- [ ] Enterprise features (backup, replication)
+- [ ] Security audit
+- [ ] Compliance documentation (HIPAA, GDPR, etc.)
+- [ ] Case studies (3+ industries)
+- [ ] Academic paper
+- [ ] Conference presentations</p>
+<p><strong>Adoption Targets:</strong>
+- 10+ production deployments
+- 100+ GitHub stars
+- 1,000+ PyPI downloads/month</p>
+<hr />
+<h3 id="phase-5-ecosystem-v200">Phase 5: Ecosystem (v2.0.0+)</h3>
+<p><strong>Duration:</strong> 1-2 years<br />
+<strong>Target:</strong> 2027-2028</p>
+<p><strong>Goals:</strong>
+1. Ecosystem development
+2. Integration with other tools
+3. Community growth</p>
+<p><strong>Features:</strong>
+- [ ] Distributed version (multi-node)
+- [ ] Cloud-native deployment
+- [ ] Integration with BI tools (Tableau, PowerBI)
+- [ ] Integration with data pipelines (Airflow, Dagster)
+- [ ] Plugin system
+- [ ] Language bindings (R, Julia, JavaScript)
+- [ ] GraphQL API
+- [ ] REST API</p>
+<p><strong>Community:</strong>
+- [ ] Contributor guidelines
+- [ ] Governance model
+- [ ] Regular releases
+- [ ] Conference track
+- [ ] Training materials</p>
+<hr />
+<h3 id="phase-6-academic-maturity-v300">Phase 6: Academic Maturity (v3.0.0+)</h3>
+<p><strong>Duration:</strong> 3-5 years<br />
+<strong>Target:</strong> 2029-2031</p>
+<p><strong>Goals:</strong>
+1. Academic recognition
+2. Industry standard
+3. Widespread adoption</p>
+<p><strong>Milestones:</strong>
+- [ ] Published in peer-reviewed journals
+- [ ] Cited in academic research
+- [ ] Taught in university courses
+- [ ] Adopted by major organizations
+- [ ] Competing implementations emerge
+- [ ] Standardization efforts</p>
+<hr />
+<h2 id="research-questions">🎓 Research Questions</h2>
+<h3 id="short-term-2026">Short-term (2026)</h3>
+<ol>
+<li>How does performance scale to millions of values?</li>
+<li>What indexing strategies work best?</li>
+<li>Can schema evolution be made less disruptive?</li>
+</ol>
+<h3 id="medium-term-2027-2028">Medium-term (2027-2028)</h3>
+<ol>
+<li>What expression language is both safe and expressive?</li>
+<li>How do concurrent writes affect consistency?</li>
+<li>Can this model work in distributed systems?</li>
+</ol>
+<h3 id="long-term-2029-2031">Long-term (2029-2031)</h3>
+<ol>
+<li>Can this replace traditional databases for auditable domains?</li>
+<li>What are the theoretical limits of this approach?</li>
+<li>How does this compare to other semantic database models?</li>
+</ol>
+<hr />
+<h2 id="target-industries">🏢 Target Industries</h2>
+<h3 id="primary-2026">Primary (2026)</h3>
+<ul>
+<li>Clinical Research</li>
+<li>Finance &amp; Trading</li>
+<li>IoT / Sensor Networks</li>
+</ul>
+<h3 id="secondary-2027-2028">Secondary (2027-2028)</h3>
+<ul>
+<li>Manufacturing &amp; Supply Chain</li>
+<li>Healthcare (non-clinical)</li>
+<li>E-commerce &amp; Retail</li>
+</ul>
+<h3 id="tertiary-2029">Tertiary (2029+)</h3>
+<ul>
+<li>Energy &amp; Utilities</li>
+<li>Logistics &amp; Transportation</li>
+<li>Government &amp; Compliance</li>
+</ul>
+<hr />
+<h2 id="success-metrics">📊 Success Metrics</h2>
+<h3 id="technical">Technical</h3>
+<ul>
+<li><strong>Performance</strong>: Query time, storage efficiency</li>
+<li><strong>Scalability</strong>: Number of values, contexts, queries/sec</li>
+<li><strong>Reliability</strong>: Uptime, data integrity, recovery</li>
+</ul>
+<h3 id="adoption">Adoption</h3>
+<ul>
+<li><strong>Users</strong>: Downloads, active installations</li>
+<li><strong>Contributors</strong>: GitHub stars, PRs, issues</li>
+<li><strong>Community</strong>: Forum activity, blog posts, talks</li>
+</ul>
+<h3 id="academic">Academic</h3>
+<ul>
+<li><strong>Publications</strong>: Papers, citations</li>
+<li><strong>Recognition</strong>: Awards, mentions</li>
+<li><strong>Education</strong>: Courses, tutorials, books</li>
+</ul>
+<hr />
+<h2 id="immediate-next-steps-this-week">🚀 Immediate Next Steps (This Week)</h2>
+<h3 id="day-1-core-implementation">Day 1: Core Implementation</h3>
+<ul>
+<li>[ ] Set up project structure</li>
+<li>[ ] Implement DatabaseManager</li>
+<li>[ ] Implement ValueStore (DuckDB)</li>
+<li>[ ] Implement RelationshipStore (DuckDB)</li>
+</ul>
+<h3 id="day-2-query-implementation">Day 2: Query Implementation</h3>
+<ul>
+<li>[ ] Implement QueryEngine (Polars)</li>
+<li>[ ] Implement ExpressionEngine (Polars)</li>
+<li>[ ] Implement main API (YetAnotherSchema)</li>
+</ul>
+<h3 id="day-3-testing-documentation">Day 3: Testing &amp; Documentation</h3>
+<ul>
+<li>[ ] Write unit tests</li>
+<li>[ ] Write integration tests</li>
+<li>[ ] Run performance benchmarks</li>
+<li>[ ] Write API documentation</li>
+<li>[ ] Create usage examples</li>
+</ul>
+<hr />
+<h2 id="key-principles">💡 Key Principles</h2>
+<ol>
+<li><strong>Simplicity</strong> - Keep the API clean and intuitive</li>
+<li><strong>Correctness</strong> - Data integrity above all else</li>
+<li><strong>Traceability</strong> - Full audit trail always</li>
+<li><strong>Performance</strong> - Fast enough for real-world use</li>
+<li><strong>Flexibility</strong> - Support multiple domains</li>
+<li><strong>Openness</strong> - Open source, community-driven</li>
+</ol>
+<hr />
+<h2 id="collaboration-opportunities">🤝 Collaboration Opportunities</h2>
+<h3 id="academic_1">Academic</h3>
+<ul>
+<li>Research partnerships</li>
+<li>Student projects</li>
+<li>Thesis topics</li>
+</ul>
+<h3 id="industry">Industry</h3>
+<ul>
+<li>Pilot projects</li>
+<li>Case studies</li>
+<li>Feedback &amp; requirements</li>
+</ul>
+<h3 id="open-source">Open Source</h3>
+<ul>
+<li>Contributors welcome</li>
+<li>Issue reporting</li>
+<li>Feature requests</li>
+</ul>
+<hr />
+<p><strong>Current Status:</strong> 📋 MVP Design Complete<br />
+<strong>Next Milestone:</strong> MVP Implementation (3 days)<br />
+<strong>Long-term Vision:</strong> Universal semantic database for auditable data</p>
+<hr />
+<p><em>"The best way to predict the future is to invent it."</em> - Alan Kay</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
